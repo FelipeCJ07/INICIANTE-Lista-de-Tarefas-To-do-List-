@@ -1,0 +1,36 @@
+/* Definindo a fonte Inter como padrão */
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/* Estilo para a barra de rolagem */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #1f2937; border-radius: 10px; } /* gray-800 */
+::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 10px; } /* gray-600 */
+::-webkit-scrollbar-thumb:hover { background: #6b7280; } /* gray-500 */
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+.fade-in { animation: fadeIn 0.3s ease-out forwards; }
+.spinner {
+    display: inline-block;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 3px solid rgba(0, 0, 0, 0.3); /* Cor do spinner ajustada para fundo claro */
+    border-radius: 50%;
+    border-top-color: #000000; /* Cor do spinner ajustada para fundo claro */
+    animation: spin 1s ease-in-out infinite;
+}
+
+/* Estilo para tarefa concluída */
+.completed span.task-text {
+    text-decoration: line-through;
+    color: #6b7280; /* text-gray-500 */
+}
